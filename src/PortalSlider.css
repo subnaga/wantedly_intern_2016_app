@@ -1,0 +1,9 @@
+.base {
+  position: relative;
+}
+
+.item {
+  transition: all 300ms ease;
+  position: absolute;
+  left: 0;
+}
