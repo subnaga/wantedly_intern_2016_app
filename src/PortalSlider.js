@@ -16,6 +16,7 @@ export default class PortalSlider extends Component {
       ltr: index >= this.state.currentIndex
     })
   }
+
   calcStyle(index) {
     let delay = this.state.ltr ? index : 2 - index
     return {
@@ -39,11 +40,13 @@ export default class PortalSlider extends Component {
       <div className={styles.base}>
         <a onClick={this.onClickPrev.bind(this)}>前へ</a>
         <a onClick={this.onClickNext.bind(this)}>次へ</a>
-        { this.props.children.map((child, index) => {
-          return <div style={this.calcStyle(index - this.state.currentIndex)} key={index} className={styles.item}>
-            { child }
-          </div>
-        }) }
+        <div className={styles.slider}>
+          { this.props.children.map((child, index) => {
+            return <div style={this.calcStyle(index - this.state.currentIndex)} key={index} className={styles.item}>
+              { child }
+            </div>
+            }) }
+        </div>
       </div>
     )
   }
