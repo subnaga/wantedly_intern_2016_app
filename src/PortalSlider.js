@@ -25,11 +25,13 @@ export default class PortalSlider extends Component {
   }
 
   onClickPrev() {
-   this.setCurrentIndex(this.state.currentIndex - 3)
+    let index = this.state.currentIndex
+    index == 0 ? this.setCurrentIndex(index) : this.setCurrentIndex(index - 3)
   }
 
   onClickNext() {
-    this.setCurrentIndex(this.state.currentIndex + 3)
+    let index = this.state.currentIndex
+    index == 15 ? this.setCurrentIndex(index) : this.setCurrentIndex(index + 3)
   }
 
   render() {
