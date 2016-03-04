@@ -5,10 +5,12 @@
     <link rel="stylesheet" type="text/css" href="./newgrad.css">
     <style>
       /*todo 外部ファイル化*/
-       *{
+      *{
         font-family: 'Helvetica Neue', Helvetica, Arial, 'Hiragino Sans', "ヒラギノ角ゴシック", 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ Pro W3',Roboto, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+        box-sizing: border-box;
         -webkit-font-smoothing: antialiased;
       }
+      
       h3{
         font-weight: 600;
         color: #9DA0A4;
@@ -16,6 +18,32 @@
         margin: 82px 0 28px;
         -webkit-font-smoothing: antialiased;
       }
+      
+
+      @media (max-width: 870px){
+        body{
+          width: 320px;
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+
+      @media (max-width: 1110px) and (min-width: 870px){
+        body{
+          width: 640px;
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+      
+      @media (min-width: 1110px){
+        body{
+          width: 960px;
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+
       .tags .tag {
         margin: 4px;
         display: inline-block;
@@ -24,11 +52,6 @@
         color: #00A4BB;
         font-weight: 600;
         -webkit-font-smoothing: antialiased;
-      }
-      body{
-        width: 960px;
-        margin-right: auto;
-        margin-left: auto;
       }
     </style>
   </head>
