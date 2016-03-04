@@ -38,8 +38,6 @@ export default class PortalSlider extends Component {
   render() {
     return (
       <div className={styles.base}>
-        <a onClick={this.onClickPrev.bind(this)}>前へ</a>
-        <a onClick={this.onClickNext.bind(this)}>次へ</a>
         <div className={styles.slider}>
           { this.props.children.map((child, index) => {
             return <div style={this.calcStyle(index - this.state.currentIndex)} key={index} className={styles.item}>
@@ -47,6 +45,8 @@ export default class PortalSlider extends Component {
             </div>
             }) }
         </div>
+        <a onClick={this.onClickPrev.bind(this)} className={styles.circle_prev}></a>
+        <a onClick={this.onClickNext.bind(this)} className={styles.circle_next}></a>
       </div>
     )
   }
